@@ -1,11 +1,12 @@
 import { RegionName, RegionSlug, regions as regionsData } from "./data/regions";
+import type { RegionInfo } from "./data/regions";
 import { citiesByRegion } from "./data/cities";
 import { Region, GhanaLocation } from "./types";
 
 export { RegionName, RegionSlug, citiesByRegion };
 export * from "./types";
 
-export const regions: Region[] = regionsData.map((r) => ({
+export const regions: Region[] = regionsData.map((r: RegionInfo) => ({
   ...r,
   cities: citiesByRegion[r.name],
 }));
@@ -49,9 +50,10 @@ export function isValidRegion(value: string): boolean {
  * Check if a city belongs to a region
  */
 export function isValidCity(region: string, city: string): boolean {
-  if (!isValidRegion(region)) return false;
-  const r = getRegion(region);
-  return r.cities.includes(city);
+  const r = regions.find(
+    (reg) => reg.name === region || reg.slug === region
+  );
+  return !!r && r.cities.includes(city);
 }
 
 /**

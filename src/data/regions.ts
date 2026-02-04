@@ -36,12 +36,12 @@ export enum RegionSlug {
   Ahafo = "ahafo",
 }
 
-export interface Region {
+export interface RegionInfo {
   name: RegionName;
   slug: RegionSlug;
 }
 
-export const regions: Region[] = [
+export const regions: RegionInfo[] = [
   { name: RegionName.GreaterAccra, slug: RegionSlug.GreaterAccra },
   { name: RegionName.Ashanti, slug: RegionSlug.Ashanti },
   { name: RegionName.Western, slug: RegionSlug.Western },
