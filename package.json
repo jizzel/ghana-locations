@@ -1,0 +1,67 @@
+{
+  "name": "ghana-locations",
+  "version": "1.0.0",
+  "description": "Ghana regions and cities/towns data with validation helpers",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./class-validator": {
+      "types": "./dist/validators/class-validator.d.ts",
+      "import": "./dist/validators/class-validator.js",
+      "require": "./dist/validators/class-validator.cjs"
+    },
+    "./zod": {
+      "types": "./dist/validators/zod.d.ts",
+      "import": "./dist/validators/zod.js",
+      "require": "./dist/validators/zod.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts src/validators/class-validator.ts src/validators/zod.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "ghana",
+    "regions",
+    "cities",
+    "locations",
+    "validation"
+  ],
+  "author": "Joseph Afriyie Attakorah",
+  "license": "MIT",
+  "peerDependencies": {
+    "class-validator": ">=0.14.0",
+    "zod": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "class-validator": {
+      "optional": true
+    },
+    "zod": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "reflect-metadata": "^0.2.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5",
+    "zod": "^3.24.1"
+  }
+}
