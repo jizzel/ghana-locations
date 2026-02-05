@@ -36,6 +36,7 @@ jobs:
   publish:
     name: Publish to NPM
     needs: validate
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -50,7 +51,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Verify tag matches package version
-        if: startsWith(github.ref, 'refs/tags/v')
         run: |
           TAG_VERSION="${GITHUB_REF#refs/tags/v}"
           PKG_VERSION=$(node -p "require('./package.json').version")
@@ -64,12 +64,6 @@ jobs:
 
       - name: Build package
         run: npm run build
-
-      - name: Sanitize npm auth
-        run: |
-          rm -f ~/.npmrc
-          unset NODE_AUTH_TOKEN
-          unset NPM_TOKEN
 
       - name: Publish
         run: npm publish --provenance --access public
