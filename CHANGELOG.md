@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1
+
+### Patch Changes
+
+- c3aa468: Added 2 cities to the Greater Accra
+
 ## 1.1.0
 
 ### Minor Changes
