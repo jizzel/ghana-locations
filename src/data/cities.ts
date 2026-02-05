@@ -2,7 +2,7 @@ import { RegionName } from "./regions";
 
 export const citiesByRegion: Record<RegionName, string[]> = {
   [RegionName.GreaterAccra]: [
-    "Accra", "Tema", "Madina", "Ashiaman", "Adenta", "Teshie", "Nungua", "Abokobi", "Dodowa", "Prampram", "Ada Foah", "Kpone"
+    "Accra", "Tema", "Madina", "Ashiaman", "Adenta", "Teshie", "Nungua", "Abokobi", "Dodowa", "Prampram", "Ada Foah", "Kpone", "Osu", "Amasaman"
   ],
   [RegionName.Ashanti]: [
     "Kumasi", "Obuasi", "Mampong", "Konongo", "Ejura", "Bekwai", "Agogo", "Juaso", "Tepa", "Effiduase", "Ejisu", "Offinso"
