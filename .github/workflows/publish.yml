@@ -65,5 +65,11 @@ jobs:
       - name: Build package
         run: npm run build
 
+      - name: Sanitize npm auth
+        run: |
+          rm -f ~/.npmrc
+          unset NODE_AUTH_TOKEN
+          unset NPM_TOKEN
+
       - name: Publish
         run: npm publish --provenance --access public
