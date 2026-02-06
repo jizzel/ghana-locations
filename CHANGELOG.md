@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.3
+
+### Patch Changes
+
+- f2b7250: Add repo url
+
 ## 1.1.2
 
 ### Patch Changes
