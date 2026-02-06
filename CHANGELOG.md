@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.4
+
+### Patch Changes
+
+- 243ca08: add more cities for all regions
+
 ## 1.1.3
 
 ### Patch Changes
