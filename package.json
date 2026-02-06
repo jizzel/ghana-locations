@@ -43,6 +43,10 @@
   ],
   "author": "Joseph Afriyie Attakorah",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jizzel/ghana-locations"
+  },
   "peerDependencies": {
     "class-validator": ">=0.14.0",
     "zod": ">=3.0.0"
