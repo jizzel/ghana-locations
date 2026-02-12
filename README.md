@@ -96,6 +96,9 @@ class CreateAddressDto {
 - `findRegionByCity(city)`: Find which region a city belongs to.
 - `searchCities(query)`: Case-insensitive search across all cities.
 
+### Data Source
+https://lgs.gov.gh/
+
 ## License
 
 MIT
